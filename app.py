@@ -33,8 +33,8 @@ PORT=8000
 app = Flask(__name__)
 
 #Implement cors for users
-CORS(users, origins=['http://localhost:3000'], supports_credentials=True)
-CORS(plants, origins=['http://localhost:3000'], supports_credentials=True)
+CORS(users, origins=['http://localhost:3000', 'https://plantery-react.herokuapp.com'], supports_credentials=True)
+CORS(plants, origins=['http://localhost:3000', 'https://plantery-react.herokuapp.com'], supports_credentials=True)
 
 #Setup a secret key for session. Login manager comes with session
 app.secret_key = "Creating RESTFUL REACT-FLASK APP. SO MUCH FUN!!!"
