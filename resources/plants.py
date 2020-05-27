@@ -55,6 +55,7 @@ def create_plant():
         name=payload['name'],
         region=payload['region'],
         description=payload['description'],
+        image=payload['image'],
 
         #This will get id from logged in user
         belongs_to = current_user.id
@@ -155,6 +156,8 @@ def update_plant(id):
             plant_to_update.region = payload['region']
         if 'description' in payload:
             plant_to_update.description = payload['description']
+        if 'image' in payload:
+            plant_to_update.image = payload['image']    
 
         plant_to_update.save()
 

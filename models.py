@@ -44,6 +44,7 @@ class Plant(Model):
     region = CharField()
     description = CharField()
     posted_on = DateTimeField(default=datetime.datetime.now)
+    image = TextField()
     belongs_to = ForeignKeyField(User, backref='plants')
 
 
